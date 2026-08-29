@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Liquidity - MEMERIFT</title>
+  <link rel="icon" href="favicon.ico" sizes="32x32">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest">
+  <meta name="theme-color" content="#050507">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;0,800;1,800;1,900&family=Chivo:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <svg class="sprite" aria-hidden="true">
+    <symbol id="i-spark" viewbox="0 0 24 24"><path d="M13 2 4 14h7l-1 8 9-12h-7l1-8Z"></path></symbol>
+
+    <symbol id="i-rift" viewbox="0 0 24 24"><path d="M13.6-3 7.6 12.4h5.2L7.4 27h3.6L17 12h-5.2L17.2-3Z"></path></symbol>
+    <symbol id="i-droplet" viewbox="0 0 24 24"><path d="M12 2.7 6.3 8.4a8 8 0 1 0 11.4 0L12 2.7Z"></path></symbol>
+  </svg>
+
+  <header class="site-header">
+    <div class="container nav">
+      <a href="index.htm" class="brand">
+        <span class="brand-mark"><svg class="icon"><use href="#i-rift"></use></svg></span>
+        <span class="brand-word"><em>MEME</em>RIFT</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.htm">Home</a></li>
+        <li><a href="create-token.html">Create Token</a></li>
+        <li><a href="liquidity.html" class="active">Liquidity</a></li>
+        <li><a href="index.htm#how">How it works</a></li>
+        <li><a href="index.htm#features">Features</a></li>
+      </ul>
+      <a href="create-token.html" class="btn-nav">Create Token</a>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="page-title">
+      <h1>Your liquidity</h1>
+    </div>
+
+    <section class="liq-body">
+      <div class="panel liq-state" id="liqEmpty">
+        <div class="liq-state-icon"><svg class="icon"><use href="#i-droplet"></use></svg></div>
+        <h2>No liquidity positions</h2>
+        <a class="btn btn-ghost mt-16" href="create-token.html">Create a token</a>
+      </div>
+
+    </section>
+  </main>
+
+  <div class="toast" id="toast"></div>
+
+  <script type="module" src="js/liquidity.js"></script>
+</body>
+</html>

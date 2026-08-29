@@ -1,0 +1,411 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create a Token - MEMERIFT</title>
+  <link rel="icon" href="favicon.ico" sizes="32x32">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest">
+  <meta name="theme-color" content="#050507">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;0,800;1,800;1,900&family=Chivo:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <svg class="sprite" aria-hidden="true">
+    <symbol id="i-spark" viewbox="0 0 24 24"><path d="M13 2 4 14h7l-1 8 9-12h-7l1-8Z"></path></symbol>
+
+    <symbol id="i-rift" viewbox="0 0 24 24"><path d="M13.6-3 7.6 12.4h5.2L7.4 27h3.6L17 12h-5.2L17.2-3Z"></path></symbol>
+    <symbol id="i-check" viewbox="0 0 24 24"><path d="m20 6-11 11-5-5"></path></symbol>
+    <symbol id="i-upload" viewbox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><path d="m17 8-5-5-5 5"></path><path d="M12 3v12"></path></symbol>
+    <symbol id="i-alert" viewbox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M12 7.5v5"></path><path d="M12 16.5h.01"></path></symbol>
+    <symbol id="i-arrow-right" viewbox="0 0 24 24"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></symbol>
+    <symbol id="i-arrow-left" viewbox="0 0 24 24"><path d="M19 12H5"></path><path d="m12 19-7-7 7-7"></path></symbol>
+    <symbol id="i-dice" viewbox="0 0 24 24"><rect x="3.5" y="3.5" width="17" height="17" rx="4"></rect><path d="M8.5 8.5h.01"></path><path d="M15.5 15.5h.01"></path><path d="M12 12h.01"></path></symbol>
+    <symbol id="i-droplet" viewbox="0 0 24 24"><path d="M12 2.7 6.3 8.4a8 8 0 1 0 11.4 0L12 2.7Z"></path></symbol>
+    <symbol id="i-copy" viewbox="0 0 24 24"><rect x="9" y="9" width="11" height="11" rx="2.2"></rect><path d="M15 6.5A2.5 2.5 0 0 0 12.5 4H6.5A2.5 2.5 0 0 0 4 6.5v6A2.5 2.5 0 0 0 6.5 15"></path></symbol>
+    <symbol id="i-bot" viewbox="0 0 24 24"><rect x="3.5" y="8" width="17" height="12" rx="3.5"></rect><path d="M12 8V5"></path><circle cx="12" cy="3.4" r="1.4"></circle><path d="M8.8 13h.01"></path><path d="M15.2 13h.01"></path><path d="M9.5 16.6h5"></path></symbol>
+    <symbol id="i-share" viewbox="0 0 24 24"><circle cx="18" cy="5" r="2.6"></circle><circle cx="6" cy="12" r="2.6"></circle><circle cx="18" cy="19" r="2.6"></circle><path d="m8.3 10.8 7.4-4.3"></path><path d="m8.3 13.2 7.4 4.3"></path></symbol>
+  </svg>
+
+  <header class="site-header">
+    <div class="container nav">
+      <a href="index.htm" class="brand">
+        <span class="brand-mark"><svg class="icon"><use href="#i-rift"></use></svg></span>
+        <span class="brand-word"><em>MEME</em>RIFT</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.htm">Home</a></li>
+        <li><a href="create-token.html" class="active">Create Token</a></li>
+        <li><a href="liquidity.html">Liquidity</a></li>
+        <li><a href="index.htm#how">How it works</a></li>
+        <li><a href="index.htm#features">Features</a></li>
+      </ul>
+      <a href="create-token.html" class="btn-nav">Create Token</a>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="page-title">
+      <h1>Create a new token</h1>
+      <p>Configure everything, review the cost, then send the total. No connection required.</p>
+    </div>
+
+    <div class="forge-layout">
+
+      <div class="panel preview-panel pv-bar">
+        <div class="pv-logo" id="pvLogo">?</div>
+        <div class="pv-id">
+          <div class="pv-name placeholder" id="pvName">Your token</div>
+          <div class="pv-symbol" id="pvSymbol">SYMBOL</div>
+        </div>
+        <div class="pv-supply-row">
+          <span>Supply</span>
+          <span class="pv-supply" id="pvSupply">-</span>
+        </div>
+        <div class="pv-badges" id="pvBadges">
+          <span class="pv-badge muted">No trust settings</span>
+        </div>
+      </div>
+
+      <div class="wizard">
+
+        <nav class="step-nav" aria-label="Token creation steps">
+          <ol class="step-list">
+            <li class="step-item is-active" data-step="1">
+              <button type="button" class="step-btn" aria-current="step">
+                <span class="step-marker">
+                  <span class="step-index">1</span>
+                  <svg class="icon step-tick"><use href="#i-check"></use></svg>
+                </span>
+                <span class="step-label">
+                  <span class="step-name">Token basics</span>
+                  <span class="step-hint">Name, symbol, supply</span>
+                </span>
+              </button>
+              <span class="step-line" aria-hidden="true"></span>
+            </li>
+            <li class="step-item" data-step="2">
+              <button type="button" class="step-btn">
+                <span class="step-marker">
+                  <span class="step-index">2</span>
+                  <svg class="icon step-tick"><use href="#i-check"></use></svg>
+                </span>
+                <span class="step-label">
+                  <span class="step-name">Advanced settings</span>
+                  <span class="step-hint">Liquidity, bot, socials</span>
+                </span>
+              </button>
+              <span class="step-line" aria-hidden="true"></span>
+            </li>
+            <li class="step-item" data-step="3">
+              <button type="button" class="step-btn">
+                <span class="step-marker">
+                  <span class="step-index">3</span>
+                  <svg class="icon step-tick"><use href="#i-check"></use></svg>
+                </span>
+                <span class="step-label">
+                  <span class="step-name">Review &amp; create</span>
+                  <span class="step-hint">Confirm and create</span>
+                </span>
+              </button>
+            </li>
+          </ol>
+        </nav>
+
+        <form id="forgeForm" novalidate="">
+
+          <section class="step-pane is-active" data-pane="1" aria-label="Token basics">
+            <div class="panel">
+              <div class="panel-head">
+                <div>
+                  <h2>Token basics</h2>
+                  <p class="panel-sub">The identity of your token - shown in wallets and explorers.</p>
+                </div>
+                <button type="button" class="btn btn-ghost btn-sm" id="prefillBtn">
+                  <svg class="icon"><use href="#i-dice"></use></svg> AI Prefill
+                </button>
+              </div>
+              <div class="form-grid">
+                <div class="field">
+                  <label for="tokenName">Token name <span class="req">*</span></label>
+                  <input type="text" id="tokenName" maxlength="32" placeholder="e.g. Ember Coin" required="">
+                  <span class="hint">Max 32 characters</span>
+                </div>
+                <div class="field">
+                  <label for="tokenSymbol">Symbol <span class="req">*</span></label>
+                  <input type="text" id="tokenSymbol" maxlength="10" placeholder="e.g. EMBR" class="upper" required="">
+                  <span class="hint">Max 10 characters</span>
+                </div>
+                <div class="field">
+                  <label for="tokenDecimals">Decimals <span class="req">*</span></label>
+                  <input type="text" inputmode="numeric" id="tokenDecimals" value="9" required="">
+                  <span class="hint">9 is standard on Solana</span>
+                </div>
+                <div class="field">
+                  <label for="tokenSupply">Total supply <span class="req">*</span></label>
+                  <input type="text" inputmode="numeric" id="tokenSupply" value="1000000000" required="">
+                  <span class="hint">20% seeds the pool, the rest is minted to your wallet</span>
+                </div>
+                <div class="full logo-desc-row">
+                  <div class="field logo-field">
+                    <label>Logo <span class="req">*</span></label>
+                    <div class="dropzone" id="dropzone" title="Click or drop an image">
+                      <input type="file" id="logoInput" accept="image/png,image/jpeg,image/webp" hidden="">
+                      <span id="dropzoneText">
+                        <svg class="icon"><use href="#i-upload"></use></svg>
+                        <span class="dz-hint">PNG or JPG<br>1000×1000</span>
+                      </span>
+                    </div>
+                  </div>
+                  <div class="field desc-field">
+                    <label for="tokenDesc">Description</label>
+                    <textarea id="tokenDesc" maxlength="500" placeholder="What is your token about?"></textarea>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="step-actions end">
+              <button type="button" class="btn btn-primary" data-goto="2">
+                Continue <svg class="icon"><use href="#i-arrow-right"></use></svg>
+              </button>
+            </div>
+          </section>
+
+          <section class="step-pane" data-pane="2" aria-label="Advanced settings">
+            <div class="panel">
+              <h2>Advanced settings</h2>
+              <p class="panel-sub">A pool is required. Everything else is optional - only the SOL you put to work is added to your total.</p>
+
+              <div class="adv-stack">
+
+                <div class="adv-module is-lit">
+                  <div class="adv-head">
+                    <span class="adv-icon"><svg class="icon"><use href="#i-droplet"></use></svg></span>
+                    <div class="adv-title">
+                      <h3>Add initial liquidity</h3>
+                      <p>Create a liquidity pool on Raydium instantly.</p>
+                    </div>
+                    <span class="adv-tag">Required</span>
+                  </div>
+                  <div class="adv-body">
+                    <p class="adv-note">Choose how much SOL to seed the pool with (minimum 1 SOL).</p>
+                    <div class="preset-row">
+                      <button type="button" class="preset" data-liq="1">1 SOL</button>
+                      <button type="button" class="preset is-on" data-liq="2">2 SOL</button>
+                      <button type="button" class="preset" data-liq="5">5 SOL</button>
+                      <button type="button" class="preset" data-liq="10">10 SOL</button>
+                      <button type="button" class="preset" data-liq="25">25 SOL</button>
+                      <div class="preset-custom">
+                        <input type="text" inputmode="decimal" id="liqCustom" placeholder="Custom" aria-label="Custom liquidity in SOL">
+                        <span class="preset-unit">SOL</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="adv-module">
+                  <div class="adv-head">
+                    <span class="adv-icon"><svg class="icon"><use href="#i-bot"></use></svg></span>
+                    <div class="adv-title">
+                      <h3>Market maker bot</h3>
+                      <p>Generates buy/sell orders from random wallets to attract other investors.</p>
+                    </div>
+                    <label class="switch">
+                      <input type="checkbox" class="adv-toggle" id="optMarketMaker">
+                      <span class="slider"></span>
+                    </label>
+                  </div>
+                  <div class="adv-body">
+                    <div class="form-grid">
+                      <div class="field">
+                        <label for="mmMakers">Number of makers</label>
+                        <input type="text" inputmode="numeric" id="mmMakers" value="100">
+                        <span class="hint">Min: 10 &#160;|&#160; Max: 1000</span>
+                      </div>
+                      <div class="field">
+                        <label for="mmVolume">Volume to generate</label>
+                        <input type="text" inputmode="decimal" id="mmVolume" value="1">
+                        <span class="hint">Min: 1 SOL &#160;|&#160; Max: 10 SOL - funds the bot, added to your total</span>
+                      </div>
+
+                      <div class="field full">
+                        <label for="mmOrderMin">Order amount</label>
+                        <span class="hint above">Select the amount of SOL each maker will be buying/selling to make it look more organic.</span>
+                        <div class="pair-row">
+                          <div class="pair">
+                            <input type="text" inputmode="decimal" id="mmOrderMin" value="0.001">
+                            <span class="hint">Minimum amount</span>
+                          </div>
+                          <div class="pair">
+                            <input type="text" inputmode="decimal" id="mmOrderMax" value="0.002" aria-label="Maximum order amount">
+                            <span class="hint">Maximum amount</span>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="field full">
+                        <label for="mmDelayMin">Delay between buy transactions (seconds)</label>
+                        <span class="hint above">Select a time frame between each buy transaction to make it look more organic.</span>
+                        <div class="pair-row">
+                          <div class="pair">
+                            <input type="text" inputmode="numeric" id="mmDelayMin" value="10">
+                            <span class="hint">Minimum delay</span>
+                          </div>
+                          <div class="pair">
+                            <input type="text" inputmode="numeric" id="mmDelayMax" value="20" aria-label="Maximum delay">
+                            <span class="hint">Maximum delay</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="adv-module">
+                  <div class="adv-head">
+                    <span class="adv-icon"><svg class="icon"><use href="#i-share"></use></svg></span>
+                    <div class="adv-title">
+                      <h3>Social links</h3>
+                      <p>Embed your project's links into the token metadata.</p>
+                    </div>
+                    <span class="adv-tag muted">Optional</span>
+                  </div>
+                  <div class="adv-body">
+                    <div class="social-row">
+                      <div class="field">
+                        <label for="linkTwitter">X / Twitter</label>
+                        <input type="url" id="linkTwitter" placeholder="https://x.com/yourtoken">
+                      </div>
+                      <div class="field">
+                        <label for="linkTelegram">Telegram</label>
+                        <input type="url" id="linkTelegram" placeholder="https://t.me/yourtoken">
+                      </div>
+                      <div class="field">
+                        <label for="linkWebsite">Website</label>
+                        <input type="url" id="linkWebsite" placeholder="https://yourtoken.xyz">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <div class="step-actions">
+              <button type="button" class="btn btn-ghost" data-goto="1">
+                <svg class="icon"><use href="#i-arrow-left"></use></svg> Back
+              </button>
+              <button type="button" class="btn btn-primary" data-goto="3">
+                Continue <svg class="icon"><use href="#i-arrow-right"></use></svg>
+              </button>
+            </div>
+          </section>
+
+          <section class="step-pane" data-pane="3" aria-label="Review">
+            <div class="panel">
+              <h2>Review</h2>
+              <p class="panel-sub">Check the details before you create the token. Nothing is charged yet.</p>
+
+              <div class="review-grid">
+                <div class="review-block">
+                  <div class="review-head">
+                    <h3>Token</h3>
+                    <button type="button" class="btn btn-ghost btn-sm" data-goto="1">Edit</button>
+                  </div>
+                  <ul class="review-list" id="reviewToken"></ul>
+                </div>
+
+                <div class="review-block">
+                  <div class="review-head">
+                    <h3>Cost</h3>
+                    <button type="button" class="btn btn-ghost btn-sm" data-goto="2">Edit</button>
+                  </div>
+                  <ul class="review-list" id="reviewCost"></ul>
+                </div>
+              </div>
+
+              <div class="launch-block">
+                <button type="button" class="btn btn-primary btn-lg" id="launchBtn">
+                  <svg class="icon"><use href="#i-spark"></use></svg>
+                  <span>Create Token</span>
+                </button>
+              </div>
+            </div>
+
+            <div class="step-actions">
+              <button type="button" class="btn btn-ghost" data-goto="2">
+                <svg class="icon"><use href="#i-arrow-left"></use></svg> Back
+              </button>
+            </div>
+          </section>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <div class="toast" id="toast"></div>
+
+  <div class="modal-overlay" id="payModal">
+    <div class="modal pay-modal">
+     <div id="payBody">
+      <h3>Funding</h3>
+      <div class="pay-field">
+        <span class="pay-label">Amount</span>
+        <div class="pay-box">
+          <span class="pay-amount-group">
+            <span class="pay-amount" id="payAmountValue">-</span>
+            <span class="pay-unit">SOL</span>
+          </span>
+          <button type="button" class="pay-copy" data-copy="amount">
+            <svg class="icon"><use href="#i-copy"></use></svg> Copy
+          </button>
+        </div>
+      </div>
+
+      <div class="pay-field">
+        <span class="pay-label">Receiving address</span>
+        <div class="pay-box">
+          <span class="pay-address" id="payAddress"></span>
+          <button type="button" class="pay-copy" data-copy="address">
+            <svg class="icon"><use href="#i-copy"></use></svg> Copy
+          </button>
+        </div>
+      </div>
+
+      <div class="pay-verify">
+        <span class="pay-label">Already sent it?</span>
+        <div class="verify-row">
+          <input type="text" id="txInput" class="verify-input" spellcheck="false" autocomplete="off" placeholder="Paste the transaction signature">
+          <button type="button" class="btn btn-primary verify-btn" id="txCheck">Check</button>
+        </div>
+        <p class="verify-error" id="verifyError" role="alert" hidden=""></p>
+      </div>
+
+      <button class="btn btn-ghost btn-block mt-16" id="payDone">Close</button>
+     </div>
+
+     <div class="pay-success" id="paySuccess" hidden="">
+       <span class="pay-success-mark"><svg class="icon"><use href="#i-check"></use></svg></span>
+       <h3>Funding confirmed</h3>
+       <p class="modal-sub" id="successLine">Your token is live.</p>
+
+       <ul class="pay-breakdown" id="successFacts"></ul>
+
+       <a class="btn btn-primary btn-block mt-16" href="liquidity.html">
+         <svg class="icon"><use href="#i-droplet"></use></svg>
+         <span>View liquidity</span>
+       </a>
+       <button type="button" class="btn btn-ghost btn-block mt-16" id="successClose">Close</button>
+     </div>
+    </div>
+  </div>
+
+  <script type="module" src="js/create-token.js"></script>
+</body>
+</html>

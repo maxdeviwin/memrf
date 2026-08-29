@@ -1,0 +1,258 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MEMERIFT - Create your Solana token in minutes</title>
+  <meta name="description" content="MEMERIFT is a no-code Solana token launcher. Mint, configure and launch your SPL token in minutes - no coding required.">
+  <link rel="icon" href="favicon.ico" sizes="32x32">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest">
+  <meta name="theme-color" content="#050507">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;0,800;1,800;1,900&family=Chivo:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <svg class="sprite" aria-hidden="true">
+    <symbol id="i-spark" viewbox="0 0 24 24"><path d="M13 2 4 14h7l-1 8 9-12h-7l1-8Z"></path></symbol>
+
+    <symbol id="i-rift" viewbox="0 0 24 24"><path d="M13.6-3 7.6 12.4h5.2L7.4 27h3.6L17 12h-5.2L17.2-3Z"></path></symbol>
+    <symbol id="i-bolt" viewbox="0 0 24 24"><path d="M13 2 4 14h7l-1 8 9-12h-7l1-8Z"></path></symbol>
+    <symbol id="i-shield" viewbox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"></path><path d="m9 12 2 2 4-4"></path></symbol>
+    <symbol id="i-image" viewbox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2.5"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><path d="m21 15-5-5L5 21"></path></symbol>
+    <symbol id="i-droplet" viewbox="0 0 24 24"><path d="M12 2.7 6.3 8.4a8 8 0 1 0 11.4 0L12 2.7Z"></path></symbol>
+    <symbol id="i-tag" viewbox="0 0 24 24"><path d="M20.6 13.4 13.4 20.6a2 2 0 0 1-2.8 0L2 12V2h10l8.6 8.6a2 2 0 0 1 0 2.8Z"></path><circle cx="7" cy="7" r="1.2"></circle></symbol>
+    <symbol id="i-wallet" viewbox="0 0 24 24"><path d="M3 6a2 2 0 0 1 2-2h13v4"></path><path d="M3 6v12a2 2 0 0 0 2 2h15v-5"></path><path d="M20 9h-4a2.5 2.5 0 0 0 0 5h4V9Z"></path></symbol>
+    <symbol id="i-check" viewbox="0 0 24 24"><path d="m20 6-11 11-5-5"></path></symbol>
+    <symbol id="i-arrow-right" viewbox="0 0 24 24"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></symbol>
+    <symbol id="i-clock" viewbox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3.5 2"></path></symbol>
+  </svg>
+
+  <header class="site-header">
+    <div class="container nav">
+      <a href="index.htm" class="brand">
+        <span class="brand-mark"><svg class="icon"><use href="#i-rift"></use></svg></span>
+        <span class="brand-word"><em>MEME</em>RIFT</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.htm" class="active">Home</a></li>
+        <li><a href="create-token.html">Create Token</a></li>
+        <li><a href="liquidity.html">Liquidity</a></li>
+        <li><a href="#how">How it works</a></li>
+        <li><a href="#features">Features</a></li>
+      </ul>
+      <a href="create-token.html" class="btn-nav">Create Token</a>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="hero">
+      <div class="container hero-inner">
+      <div class="hero-badge"><span class="pulse"></span> Live on Solana · 400ms block times</div>
+      <h1>Every good idea deserves a <span class="neon-text">Solana token</span></h1>
+      <p>Name it, brand it, set the supply. We handle the rest to get you on-chain in under two minutes.</p>
+      <div class="hero-actions">
+        <a href="create-token.html" class="btn btn-shine btn-lg">
+          <svg class="icon"><use href="#i-spark"></use></svg> Start Creating
+        </a>
+        <a href="#how" class="btn btn-ghost btn-lg">
+          See how it works <svg class="icon"><use href="#i-arrow-right"></use></svg>
+        </a>
+      </div>
+      </div>
+    </section>
+
+    <section class="container">
+      <div class="stats">
+        <div class="stat-card">
+          <div class="stat-value">1,500+</div>
+          <div class="stat-label">Tokens created</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value">100+</div>
+          <div class="stat-label">Creators onboard</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value">99.9%</div>
+          <div class="stat-label">Launch success rate</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value">&lt; 2 min</div>
+          <div class="stat-label">Average time to launch</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section how-section" id="how">
+
+      <div class="token-field" aria-hidden="true">
+        <div class="token-tile" data-depth="0.9" style="--x:1.5%;  --y:4%;  --s:112px; --r:-9deg;  --rx:5deg;  --ry:-7deg;">
+          <img src="coins/images/28600/large/bonk.jpg" alt="" loading="lazy"><b>B</b>
+        </div>
+        <div class="token-tile" data-depth="0.45" style="--x:2.5%;  --y:44%; --s:96px;  --r:7deg;   --rx:4deg;  --ry:6deg;">
+          <img src="coins/images/33566/large/dogwifhat.jpg" alt="" loading="lazy"><b>W</b>
+        </div>
+        <div class="token-tile" data-depth="0.7" style="--x:7%;    --y:74%; --s:78px;  --r:13deg;  --rx:-5deg; --ry:-6deg;">
+          <img src="coins/images/16125/large/babydoge.jpg" alt="" loading="lazy"><b>B</b>
+        </div>
+        <div class="token-tile" data-depth="0.3" style="--x:8%;    --y:22%; --s:64px;  --r:-15deg; --rx:-6deg; --ry:8deg;">
+          <img src="coins/images/36071/large/bome.png" alt="" loading="lazy"><b>B</b>
+        </div>
+        <div class="token-tile" data-depth="0.85" style="--x:88%;   --y:10%; --s:104px; --r:8deg;   --rx:-5deg; --ry:7deg;">
+          <img src="coins/images/52622/large/PUDGY_PENGUINS_PENGU_PFP.png" alt="" loading="lazy"><b>P</b>
+        </div>
+        <div class="token-tile" data-depth="0.5" style="--x:86.5%; --y:56%; --s:88px;  --r:-6deg;  --rx:-4deg; --ry:-6deg;">
+          <img src="coins/images/33760/large/image.jpg" alt="" loading="lazy"><b>P</b>
+        </div>
+        <div class="token-tile" data-depth="0.65" style="--x:91%;   --y:80%; --s:98px;  --r:5deg;   --rx:5deg;  --ry:6deg;">
+          <img src="coins/images/37352/large/DOGGOTOTHEMOON.png" alt="" loading="lazy"><b>D</b>
+        </div>
+        <div class="token-tile" data-depth="0.35" style="--x:93.5%; --y:30%; --s:66px;  --r:-12deg; --rx:6deg;  --ry:-8deg;">
+          <img src="coins/images/51100/large/ban.jpg" alt="" loading="lazy"><b>C</b>
+        </div>
+      </div>
+
+      <div class="container">
+      <div class="section-head">
+        <div class="eyebrow">How it works</div>
+        <h2>Three steps to the blockchain</h2>
+        <p>No SDKs, no CLI, no smart-contract knowledge. Just a form and one transfer.</p>
+      </div>
+      <div class="steps">
+        <div class="step-card">
+          <div class="step-top">
+            <span class="step-icon"><svg class="icon"><use href="#i-image"></use></svg></span>
+            <span class="step-num">01</span>
+          </div>
+          <h3>Design your token</h3>
+          <p>Pick a name, symbol, supply and upload your logo. Add socials and a description if you want.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-top">
+            <span class="step-icon"><svg class="icon"><use href="#i-shield"></use></svg></span>
+            <span class="step-num">02</span>
+          </div>
+          <h3>Lock in trust</h3>
+          <p>Optionally revoke mint, freeze and update authorities so holders know the rules can't change.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-top">
+            <span class="step-icon"><svg class="icon"><use href="#i-wallet"></use></svg></span>
+            <span class="step-num">03</span>
+          </div>
+          <h3>Fund &amp; create</h3>
+          <p>Send the total to the address we show you. Your token is minted and delivered to the wallet you paid from.</p>
+        </div>
+      </div>
+      </div>
+    </section>
+
+    <section class="section container">
+      <div class="showcase">
+        <div class="showcase-head">
+          <span class="eyebrow-chip">Features</span>
+          <h2>Unlock the full potential of your token</h2>
+          <p>Create, manage and launch your token with secure transactions, instant deployment and zero coding required.</p>
+        </div>
+
+        <div class="showcase-grid">
+          <div class="showcase-phone">
+            <img src="assets/iphone.png" alt="A Solana wallet open on a phone, showing token balances" class="phone-shot">
+          </div>
+
+          <div class="showcase-cards">
+            <div class="bubbles">
+              <div class="bubble neon">
+                <b>99.9%</b>
+                <span>Launch success rate</span>
+              </div>
+              <div class="bubble dark">
+                <b>1,500+</b>
+                <span>Tokens created</span>
+              </div>
+            </div>
+
+            <div class="showcase-cta">
+              <h3>Create and deploy your token in minutes</h3>
+              <p>Turn your idea into a live Solana token. Whether it is for a project, a community or a joke that got out of hand, you fill in the form, send one transfer and it is done.</p>
+              <a class="btn btn-primary" href="create-token.html">
+                <svg class="icon"><use href="#i-spark"></use></svg> Create Token
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section container" id="features">
+      <div class="section-head">
+        <div class="eyebrow">The toolkit</div>
+        <h2>Everything you need to launch</h2>
+        <p>A complete launchpad for creators - built for speed, priced for everyone.</p>
+      </div>
+      <div class="features">
+        <div class="feature-card">
+          <div class="feature-icon"><svg class="icon icon-lg"><use href="#i-bolt"></use></svg></div>
+          <h3>Instant minting</h3>
+          <p>Your SPL token is minted and delivered to the wallet you paid from, no follow-up needed.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon"><svg class="icon icon-lg"><use href="#i-shield"></use></svg></div>
+          <h3>Authority controls</h3>
+          <p>Revoke mint, freeze and update authorities at launch to make your token verifiably immutable.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon"><svg class="icon icon-lg"><use href="#i-image"></use></svg></div>
+          <h3>On-chain metadata</h3>
+          <p>Logo, description and social links stored as proper token metadata - visible in every wallet and explorer.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon"><svg class="icon icon-lg"><use href="#i-droplet"></use></svg></div>
+          <h3>Liquidity ready</h3>
+          <p>Pair your token with SOL and seed a liquidity pool right from the launcher. Coming soon.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon"><svg class="icon icon-lg"><use href="#i-tag"></use></svg></div>
+          <h3>Transparent fees</h3>
+          <p>One flat base fee plus clearly priced add-ons. The total is shown before you send anything.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon"><svg class="icon icon-lg"><use href="#i-wallet"></use></svg></div>
+          <h3>Nothing to connect</h3>
+          <p>No wallet connection, no signature prompts. Send one transfer from whichever Solana wallet you already use.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="container">
+      <div class="cta-band">
+        <h2>The chain is hot. Ready when you are.</h2>
+        <p>Join thousands of creators who launched their token with us.</p>
+        <a href="create-token.html" class="btn btn-primary btn-lg">
+          <svg class="icon"><use href="#i-spark"></use></svg> Create your token now
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-row">
+      <span>© 2026 MEMERIFT.</span>
+      <div class="footer-links">
+        <a href="create-token.html">Create Token</a>
+        <a href="#how">How it works</a>
+        <a href="#features">Features</a>
+      </div>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast"></div>
+
+  <script type="module" src="js/index.js"></script>
+</body>
+</html>

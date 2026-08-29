@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="64" height="64" role="img" aria-label="MEMERIFT">
+  <!-- The header brand mark: a neon tile cleaved by a bolt. Same #i-rift path and
+       same 24-unit viewBox as the sprite in the pages, so the favicon and the header
+       cannot drift apart. The band's ends fall outside the viewBox on purpose - the
+       cleave has to leave the tile at both edges to split it, rather than sit on it
+       as a glyph. Filled, not stroked: the bolt needs mitred corners and one sharp
+       mid-jog, and a constant-width stroke reads as a crack instead. The clip is
+       what rounds it off. -->
+  <clipPath id="tile"><rect width="24" height="24" rx="6.86"/></clipPath>
+  <g clip-path="url(#tile)">
+    <rect width="24" height="24" fill="#26ff80"/>
+    <path d="M13.6-3 7.6 12.4h5.2L7.4 27h3.6L17 12h-5.2L17.2-3Z" fill="#07080a"/>
+  </g>
+</svg>
